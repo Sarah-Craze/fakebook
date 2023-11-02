@@ -1,0 +1,10 @@
+<% if current_user %>
+ Logged in as <%= current_user.email %>.
+ <%= link_to 'Log Out', logout_path %>
+<% else %>
+ <%= link_to 'Créer nouveau compte', signup_path, class: 'btn btn-success' %> or
+ <%= link_to 'Se connecter', login_path, class: 'btn btn-primary' %>
+<% end %>
+<p id='notice'><%= notice %></p>
+<h1>Facebook</h1>
+<p>Lorem ipsum …</p>
