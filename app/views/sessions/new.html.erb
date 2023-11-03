@@ -1,6 +1,8 @@
 <p id='alert'><%= alert %></p>
 
+<div class="container">
 <div class="container mt-4">
+
   <div class="row justify-content-center">
     <!-- Colonne pour le texte -->
     <div class="col-md-7">
@@ -8,7 +10,7 @@
       <br>
       <br>
       <br>
-      <br>
+      <p class="display-4 mb-4"><strong class="text-primary">facebook</strong></p>
       <p class="display-6 mb-4">Avec Facebook, partagez et restez en <br>contact avec votre entourage.</p>
     </div>
 
@@ -24,6 +26,7 @@
             <%= label_tag :password %>
             <%= password_field_tag :password, nil, class: 'form-control' %>
           </div>
+          <br>
           <div class="form-group">
             <center><%= submit_tag 'Se connecter', class: 'btn btn-primary btn-block' %></center>
           </div>
@@ -45,3 +48,4 @@
     </div>
   </div>
 </div>
+<div>

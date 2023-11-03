@@ -10,33 +10,53 @@
       </ul>
     </div>
   <% end %>
+  <div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card p-4">
+        <%= form_with(model: user) do |form| %>
+          <% if user.errors.any? %>
+            <div style="color: red">
+              <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+              <ul>
+                <% user.errors.each do |error| %>
+                  <li><%= error.full_message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <h1 style="color: gray; font-size: 20px;">S'inscrire, <br>c'est rapide et facile.</h1>
+          <div class="mb-3">
+            <%= form.label :firstname, class: "form-label" %>
+            <%= form.text_field :firstname, class: "form-control" %>
+          </div>
 
-  <div>
-    <%= form.label :firstname, style: "display: block" %>
-    <%= form.text_field :firstname %>
-  </div>
+          <div class="mb-3">
+            <%= form.label :lastname, class: "form-label" %>
+            <%= form.text_field :lastname, class: "form-control" %>
+          </div>
 
-  <div>
-    <%= form.label :lastname, style: "display: block" %>
-    <%= form.text_field :lastname %>
-  </div>
+          <div class="mb-3">
+            <%= form.label :email, class: "form-label" %>
+            <%= form.text_field :email, class: "form-control" %>
+          </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
+          <div class="mb-3">
+            <%= form.label :password, class: "form-label" %>
+            <%= form.password_field :password, class: "form-control" %>
+          </div>
 
-  <div>
-    <%= form.label :password, style: "display: block" %>
-    <%= form.password_field :password %>
-  </div>
+          <div class="mb-3">
+            <%= form.label :password_confirmation, class: "form-label" %>
+            <%= form.password_field :password_confirmation, class: "form-control" %>
+          </div>
 
-  <div>
-    <%= form.label :password_confirmation, style: "display: block" %>
-    <%= form.password_field :password_confirmation %>
+          <div class="text-center">
+            <%= form.submit "S'inscrire", class: "btn btn-success" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>

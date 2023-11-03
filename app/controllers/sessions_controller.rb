@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-    def new
+      def new
    end
     def create
      user = User.find_by_email(params[:email])
@@ -17,4 +17,3 @@ class SessionsController < ApplicationController
       redirect_to root_url, notice: "Déconnecté !"
     end
    end
-   
