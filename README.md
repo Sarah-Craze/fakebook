@@ -1,3 +1,3 @@
 # Fakebook !
 
-A Facebook-inspired single-page app built on Ruby on Rails
+A Facebook-inspired app built on Ruby on Rails
